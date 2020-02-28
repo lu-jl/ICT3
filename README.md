@@ -1,92 +1,33 @@
 # 人工智能
 
-## 模型训练方式
-
+## 简介
 模型训练方式不同可以分为监督学习（Supervised Learning），无监督学习（Unsupervised Learning）、半监督学习（Semi-supervised Learning）和强化学习（Reinforcement Learning）四大类。
 
-### 监督学习（Supervised Learning）
 
-#### 人工神经网络（Artificial Neural Network）
+## 数学基础
+- [数学基础](10_math/README.md)
 
-##### 反向传播（Backpropagation）
 
-##### 波尔兹曼机（Boltzmann Machine）
+## 机器学习基础
+- [机器学习基础](20_basics/README.md)
 
-##### 卷积神经网络（Convolutional Neural Network）
+## 模型训练方式
 
-##### Hopfield网络（hopfield Network）
-
-##### 多层感知器（Multilyer Perceptron）
-
-##### 径向基函数网络（Radial Basis Function Network，RBFN）
-
-##### 受限波尔兹曼机（Restricted Boltzmann Machine）
-
-##### 回归神经网络（Recurrent Neural Network，RNN）
-
-##### 自组织映射（Self-organizing Map，SOM）
-
-##### 尖峰神经网络（Spiking Neural Network）
-
-#### 贝叶斯类（Bayesin）
-##### 朴素贝叶斯（Naive Bayes）
-
-##### 高斯贝叶斯（Gaussian Naive Bayes）
-
-##### 多项朴素贝叶斯（Multinomial Naive Bayes）
-
-##### 平均-依赖性评估（Averaged One-Dependence Estimators，AODE）
-
-##### 贝叶斯信念网络（Bayesian Belief Network，BBN）
-
-##### 贝叶斯网络（Bayesian Network，BN）
-
-#### 决策树（Decision Tree）
-##### 分类和回归树（Classification and Regression Tree，CART）
-
-##### 迭代Dichotomiser3（Iterative Dichotomiser 3， ID3）
-
-##### C4.5算法（C4.5 Algorithm）
-
-##### C5.0算法（C5.0 Algorithm）
-
-##### 卡方自动交互检测（Chi-squared Automatic Interaction Detection，CHAID）
-
-##### 决策残端（Decision Stump）
-
-##### ID3算法（ID3 Algorithm）
-
-##### 随机森林（Random Forest）
-
-##### SLIQ（Supervised Learning in Quest）
 
 #### 线性分类器（Linear Classifier）
 
 ##### Fisher的线性判别（Fisher’s Linear Discriminant）
 
-##### 线性回归（Linear Regression）
-
-##### 逻辑回归（Logistic Regression）
 
 ##### 多项逻辑回归（Multionmial Logistic Regression）
 
-##### 朴素贝叶斯分类器（Naive Bayes Classifier）
-
 ##### 感知（Perception）
 
-##### 支持向量机（Support Vector Machine）
 
 
 ### 无监督学习
 
-#### 人工神经网络（Artificial Neural Network）
-##### 生成对抗网络（Generative Adversarial Networks，GAN）
 
-##### 前馈神经网络（Feedforward Neural Network）
-
-##### 逻辑学习机（Logic Learning Machine）
-
-##### 自组织映射（Self-organizing Map）
 
 #### 关联规则学习（Association Rule Learning）
 ##### 先验算法（Apriori Algorithm）
@@ -100,24 +41,7 @@
 
 ##### 概念聚类（Conceptual Clustering）
 
-#### 聚类分析（Cluster analysis）
-##### BIRCH算法
 
-##### DBSCAN算法
-
-##### 期望最大化（Expectation-maximization，EM）
-
-##### 模糊聚类（Fuzzy Clustering）
-
-##### K-means算法
-
-##### K均值聚类（K-means Clustering）
-
-##### K-medians聚类
-
-##### 均值漂移算法（Mean-shift）
-
-##### OPTICS算法
 
 #### 异常检测（Anomaly detection）
 ##### K最邻近（K-nearest Neighbor，KNN）算法
@@ -145,23 +69,6 @@
 #### 基于模型强化学习（Model Based RL）
 
 #### 时序差分学习（Temporal Different Learning）
-
-
-## 深度学习
-### 深度信念网络（Deep Belief Machines）
-
-### 深度卷积神经网络（Deep Convolutional Neural Networks）
-
-### 深度递归神经网络（Deep Recurrent Neural Network）
-
-### 分层时间记忆（Hierarchical Temporal Memory，HTM）
-
-### 深度波尔兹曼机（Deep Boltzmann Machine，DBM）
-
-### 栈式自动编码器（Stacked Autoencoder）
-
-### 生成对抗网络（Generative Adversarial Networks）
-
 
 ## 解决任务方式
 ### 二分类（Two-class Classification）
@@ -219,11 +126,6 @@
 #### 快速森林分位数回归（Fast Forest Quantile Regression）
 适用于预测分布的场景。
 
-#### 线性回归（Linear Regression）
-适用于训练时间短、线性模型的场景。
-
-#### 贝叶斯线性回归（Bayesian Linear Regression）
-适用于线性模型，训练数据量较少的场景。
 
 #### 神经网络回归（Neural Network Regression）
 适用于精准度高、训练时间较长的场景。
