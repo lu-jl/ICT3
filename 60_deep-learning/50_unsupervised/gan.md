@@ -4,21 +4,22 @@
 
 什么是生成（generation）？就是模型通过学习一些数据，然后生成类似的数据。让机器看一些动物图片，然后自己来产生动物的图片，这就是生成。
 
+
 ### auto-encoder（自编码器）
 
 训练一个 encoder，把 input 转换成 code，然后训练一个 decoder，把 code 转换成一个 image，然后计算得到的 image 和 input 之间的 MSE（mean square error），训练完这个 model 之后，取出后半部分 NN Decoder，输入一个随机的 code，就能 generate 一个 image。但是 auto-encoder 生成 image 的效果，当然看着很别扭啦，一眼就能看出真假。
 
-![image-20200308120459542](figures/image-20200308120459542.png)
+<img src="figures/image-20200308120459542.png" alt="image-20200308120459542" style="zoom:33%;" />
 
 ## 算法
 
-GAN 有两个网络，一个是 generator，一个是 discriminator，从二人零和博弈中受启发，通过两个网络互相对抗来达到最好的生成效果。
+GAN 有两个网络，一个是 generator，一个是 discriminator，generator通过机器生成数据（大部分情况下是图像），目的是“骗过”discriminator。Discriminator判断这张图像是真实的还是机器生成的，目的是找出生成器做的“假数据”从二人零和博弈中受启发，通过两个网络互相对抗来达到最好的生成效果。
 
 - 生成器接收随机数并返回图像。
 - 将生成的图像与从实际数据集中获取的图像流一起馈送到鉴别器中。
 - 鉴别器接收真实和假图像并返回概率，0到1之间的数字，1表示真实性的预测，0表示假。
 
-![image-20200308123225503](figures/image-20200308123225503.png)
+<img src="figures/image-20200308123225503.png" alt="image-20200308123225503" style="zoom: 33%;" />
 
 ### 第一阶段：固定「判别器D」，训练「生成器G」
 
