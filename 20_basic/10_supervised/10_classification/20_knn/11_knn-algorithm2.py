@@ -76,12 +76,8 @@ def classify0(inX, dataSet, labels, k):
     return label
 
 
-def test():
+if __name__ == '__main__':
     group, labels = createDataSet()
     print(str(group))
     print(str(labels))
     print(classify0([0.1, 0.1], group, labels, 3))
-
-
-if __name__ == '__main__':
-    test()
