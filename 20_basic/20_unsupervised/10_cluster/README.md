@@ -8,7 +8,7 @@
 
 ## K均（K-means）聚类
 
-- [K均聚类](k-means.md)
+- [K均聚类](20_k-means/k-means.md)
 
 
 
