@@ -86,7 +86,7 @@ def calcEk(oS, k):
     Returns:
         Ek  预测结果与真实结果比对，计算误差Ek
     """
-    fXk = float(multiply(oS.alphas, oS.labelMat).T * (oS.X * oS.X[k, :].T)) + oS.b
+    fXk = float(multiply(oS.alphas, oS.labelMat).T * (oS.instanceSet * oS.instanceSet[k, :].T)) + oS.b
     Ek = fXk - float(oS.labelMat[k])
     return Ek
 
@@ -141,7 +141,7 @@ def selectJ(i, oS, Ei):  # this is the second choice -heurstic, and calcs Ej
                 Ej = Ek
         return maxK, Ej
     else:  # 如果是第一次循环，则随机选择一个alpha值
-        j = selectJrand(i, oS.m)
+        j = selectJrand(i, oS.normMatSize)
 
         # 求 Ek误差: 预测值-真实值的差
         Ej = calcEk(oS, j)
@@ -205,7 +205,7 @@ def innerL(i, oS):
 
         # eta是alphas[j]的最优修改量，如果eta==0，需要退出for循环的当前迭代过程
         # 参考《统计学习方法》李航-P125~P128<序列最小最优化算法>
-        eta = 2.0 * oS.X[i, :] * oS.X[j, :].T - oS.X[i, :] * oS.X[i, :].T - oS.X[j, :] * oS.X[j, :].T
+        eta = 2.0 * oS.instanceSet[i, :] * oS.instanceSet[j, :].T - oS.instanceSet[i, :] * oS.instanceSet[i, :].T - oS.instanceSet[j, :] * oS.instanceSet[j, :].T
         if eta >= 0:
             print("eta>=0")
             return 0
@@ -231,8 +231,8 @@ def innerL(i, oS):
         # w= Σ[1~n] ai*yi*xi => b = yj Σ[1~n] ai*yi(xi*xj)
         # 所以:   b1 - b = (y1-y) - Σ[1~n] yi*(a1-a)*(xi*x1)
         # 为什么减2遍？ 因为是 减去Σ[1~n]，正好2个变量i和j，所以减2遍
-        b1 = oS.b - Ei - oS.labelMat[i] * (oS.alphas[i] - alphaIold) * oS.X[i, :] * oS.X[i, :].T - oS.labelMat[j] * (oS.alphas[j] - alphaJold) * oS.X[i, :] * oS.X[j, :].T
-        b2 = oS.b - Ej - oS.labelMat[i] * (oS.alphas[i] - alphaIold) * oS.X[i, :] * oS.X[j, :].T - oS.labelMat[j] * (oS.alphas[j] - alphaJold) * oS.X[j, :] * oS.X[j, :].T
+        b1 = oS.b - Ei - oS.labelMat[i] * (oS.alphas[i] - alphaIold) * oS.instanceSet[i, :] * oS.instanceSet[i, :].T - oS.labelMat[j] * (oS.alphas[j] - alphaJold) * oS.instanceSet[i, :] * oS.instanceSet[j, :].T
+        b2 = oS.b - Ej - oS.labelMat[i] * (oS.alphas[i] - alphaIold) * oS.instanceSet[i, :] * oS.instanceSet[j, :].T - oS.labelMat[j] * (oS.alphas[j] - alphaJold) * oS.instanceSet[j, :] * oS.instanceSet[j, :].T
         if (0 < oS.alphas[i]) and (oS.C > oS.alphas[i]):
             oS.b = b1
         elif (0 < oS.alphas[j]) and (oS.C > oS.alphas[j]):

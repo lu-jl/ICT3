@@ -176,7 +176,7 @@ def selectJ(i, oS, Ei):  # this is the second choice -heurstic, and calcs Ej
                 Ej = Ek
         return maxK, Ej
     else:  # 如果是第一次循环，则随机选择一个alpha值
-        j = selectJrand(i, oS.m)
+        j = selectJrand(i, oS.normMatSize)
 
         # 求 Ek误差: 预测值-真实值的差
         Ej = calcEk(oS, j)
