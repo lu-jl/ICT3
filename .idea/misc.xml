@@ -3,4 +3,7 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/20_basic/10_supervised/10_classification/30_naive-bayes/81_sk-nb-bernoulli.py" />
+  </component>
 </project>
