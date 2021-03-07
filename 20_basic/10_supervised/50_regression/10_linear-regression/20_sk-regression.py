@@ -9,18 +9,19 @@ from sklearn.isotonic import IsotonicRegression
 from sklearn.utils import check_random_state
 
 
-# Isotonic Regression 等式回归
 if __name__ == "__main__":
     n = 100
     dataSet = np.arange(n)
     randomState = check_random_state(0)
     labelSet = randomState.randint(-50, 50, size=(n,)) + 50. * np.log(1 + np.arange(n))
 
+    # 水平回归
     isotonicRegressor = IsotonicRegression()
     isotonicFitDataSet = isotonicRegressor.fit_transform(dataSet, labelSet)
 
+    # 线性回归
     linearRegressor = LinearRegression()
-    linearRegressor.fit(dataSet[:, np.newaxis], labelSet)  # 线性回归的dataSet需要为2d
+    linearRegressor.fit(dataSet[:, np.newaxis], labelSet)  # 线性回归的数据集需要为2d
 
     fig = plt.figure()
     plt.plot(dataSet, labelSet, 'r.', markersize=12)
