@@ -11,9 +11,9 @@
 
 按照以上的原则，我们能解决数据清理中遇到的大部分问题，使得数据标准、干净、连续，为后续数据统计、数据挖掘做好准备。
 
-### 完整性
+## 完整性
 
-#### 缺失值
+### 缺失值
 
 在数据中有些年龄、体重数值是缺失的，这往往是因为数据量较大，在过程中，有些数值没有采集到。通常我们可以采用以下三种方法：
 
@@ -27,7 +27,7 @@
 df['Age'].fillna(df['Age'].mean(), inplace=True)
 ```
 
-#### 空行
+### 空行
 
 我们发现数据中有一个空行，除了 index 之外，全部的值都是 NaN。Pandas 的 read_csv() 并没有可选参数来忽略空行，这样，我们就需要在数据被读入之后再使用 dropna() 进行处理，删除空行。
 
@@ -35,9 +35,9 @@ df['Age'].fillna(df['Age'].mean(), inplace=True)
 df.dropna(how='all',inplace=True) 
 ```
 
-### 全面性
+## 合理性
 
-#### 列数据单位不统一
+### 单位不统一
 
 ```python
 # 获取 weight 数据列中单位为 lbs 的数据
@@ -50,9 +50,7 @@ weight = int(float(lbs_row['weight'][:-3])/2.2)
 df.at[i,'weight'] = '{}kgs'.format(weight) 
 ```
 
-### 合理性
-
-#### 非 ASCII 字符
+### 非 ASCII 字符
 
 可以采用删除或者替换的方式来解决非 ASCII 问题，这里我们使用删除方法：
 
@@ -61,9 +59,9 @@ df['first_name'].replace({r'[^\x00-\x7F]+':''}, regex=True, inplace=True)
 df['last_name'].replace({r'[^\x00-\x7F]+':''}, regex=True, inplace=True)
 ```
 
-### 唯一性
+## 唯一性
 
-#### 一列有多个参数
+### 一列有多个参数
 
 在数据中不难发现，姓名列（Name）包含了两个参数 Firstname 和 Lastname。为了达到数据整洁目的，我们将 Name 列拆分成 Firstname 和 Lastname  两个字段。我们使用 Python 的 split 方法，str.split(expand=True)，将列表拆成新的列，再将原来的 Name  列删除。
 
@@ -72,7 +70,7 @@ df[['first_name','last_name']] = df['name'].str.split(expand=True)
 df.drop('name', axis=1, inplace=True)
 ```
 
-#### 重复数据
+### 重复数据
 
 校验一下数据中是否存在重复记录。如果存在重复记录，就使用 Pandas 提供的 drop_duplicates() 来删除重复数据。
 
@@ -83,27 +81,13 @@ df.drop_duplicates(['first_name','last_name'],inplace=True)
 
 没有高质量的数据，就没有高质量的数据挖掘，而数据清洗是高质量数据的一道保障。当你从事这方面工作的时候，你会发现养成数据审核的习惯非常重要。而且越是优秀的数据挖掘人员，越会有“数据审核”的“职业病”。这就好比编辑非常在意文章中的错别字、语法一样。数据的规范性，就像是你的作品一样，通过清洗之后，会变得非常干净、标准。
 
+## 采样不均
+
+### 数据不均衡
+
+例如，异常数据只占 1%
+
+### 样本权重不均
 
 
-- 异常值
-  - 异常值原因
-    - 小概率事件(valid)
-    - 数据问题(invalid)
-  - 影响：模型权重，MSE计算偏重， boosting
-  - 解决方法
-    - Valid or not
-    - 去掉异常值
-    - 变换：log、开方、binning
-    - 设置可取值范围
-    - 选择更robust loss function，e.g. MAE
-    - 对异常值不敏感的模型：tree-based model
 
-- 缺失值
-  - 缺失数据的原因：MCAR、MAR、NMAR
-  - 解决方法：
-    - 去掉不用：MAR或者数据足够多
-    - Imputation：
-      - Ad-hoc：均值，众数, 0， last obs carry forward
-      - 用模型预测：kNN, multiple imputation
-    - 加入新特征：是否缺失
-    - 使用对缺失不敏感的模型：e.g. tree-based model
