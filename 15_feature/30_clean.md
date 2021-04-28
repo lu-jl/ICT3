@@ -17,9 +17,12 @@
 
 在数据中有些年龄、体重数值是缺失的，这往往是因为数据量较大，在过程中，有些数值没有采集到。通常我们可以采用以下三种方法：
 
-- 删除：删除数据缺失的记录；
-- 均值：使用当前列的均值；
-- 高频：使用当前列出现频率最高的数据。
+- 删除：删除数据缺失的记录
+- 代替
+  - 固定值：比如“-999”、“-1”
+  - 均值：使用当前列的均值
+  - 高频：使用当前列出现频率最高的数据
+  - 重构特殊值：
 
 比如我们想对 df[‘Age’]中缺失的数值用平均年龄进行填充，可以这样写：
 
@@ -35,7 +38,7 @@ df['Age'].fillna(df['Age'].mean(), inplace=True)
 df.dropna(how='all',inplace=True) 
 ```
 
-## 合理性
+## 全面性
 
 ### 单位不统一
 
@@ -61,16 +64,7 @@ df['last_name'].replace({r'[^\x00-\x7F]+':''}, regex=True, inplace=True)
 
 ## 唯一性
 
-### 一列有多个参数
-
-在数据中不难发现，姓名列（Name）包含了两个参数 Firstname 和 Lastname。为了达到数据整洁目的，我们将 Name 列拆分成 Firstname 和 Lastname  两个字段。我们使用 Python 的 split 方法，str.split(expand=True)，将列表拆成新的列，再将原来的 Name  列删除。
-
-```python
-df[['first_name','last_name']] = df['name'].str.split(expand=True)
-df.drop('name', axis=1, inplace=True)
-```
-
-### 重复数据
+### 重复行
 
 校验一下数据中是否存在重复记录。如果存在重复记录，就使用 Pandas 提供的 drop_duplicates() 来删除重复数据。
 
@@ -81,11 +75,34 @@ df.drop_duplicates(['first_name','last_name'],inplace=True)
 
 没有高质量的数据，就没有高质量的数据挖掘，而数据清洗是高质量数据的一道保障。当你从事这方面工作的时候，你会发现养成数据审核的习惯非常重要。而且越是优秀的数据挖掘人员，越会有“数据审核”的“职业病”。这就好比编辑非常在意文章中的错别字、语法一样。数据的规范性，就像是你的作品一样，通过清洗之后，会变得非常干净、标准。
 
-## 采样不均
+### 重复列
+
+### 列值为常数
+
+### 一列有多个参数
+
+在数据中不难发现，姓名列（Name）包含了两个参数 Firstname 和 Lastname。为了达到数据整洁目的，我们将 Name 列拆分成 Firstname 和 Lastname  两个字段。我们使用 Python 的 split 方法，str.split(expand=True)，将列表拆成新的列，再将原来的 Name  列删除。
+
+```python
+df[['first_name','last_name']] = df['name'].str.split(expand=True)
+df.drop('name', axis=1, inplace=True)
+```
+
+
+
+## 合理性
 
 ### 数据不均衡
 
 例如，异常数据只占 1%
+
+### 样本次序混乱
+
+行的次序被打乱了，或则一部分样本被修改了
+
+the dataset is shuffled
+
+
 
 ### 样本权重不均
 

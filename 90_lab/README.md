@@ -2,5 +2,5 @@
 
 ## Installation
 
-- [installation](10_installation/README.d)
+- [installation](01_installation/README.d)
 
