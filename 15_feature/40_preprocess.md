@@ -75,6 +75,10 @@ encode a categorical feature is to map it's unique values to different numbers
 - alphabetical（sorted）：按照字母排序
 - order of appearance：按照出现次序排序
 
+#### mean 编码
+
+基于 label 编码，把 label 编码乘以二再除以该编码出现的次数。
+
 #### Frequency 编码
 
 按照频率排序
