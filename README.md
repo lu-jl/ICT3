@@ -2,6 +2,7 @@
 
 ## 机器学习简介
 - [机器学习简介](01_introduction/README.md)
+- [标准&比赛流程](01_introduction/20_procedure.md)
 
 
 ## 机器学习通用算法
