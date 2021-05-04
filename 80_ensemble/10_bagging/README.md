@@ -4,6 +4,8 @@
 
 Bagging（Bootstrap aggregating）的核心思想是民主，所有基础模型都一致对待，每个基础模型手里都只有一票，然后使用民主投票的方式得到最终的结果。
 
+Bagging refers to averaging slightly different versions of the same model as a means to improve the predictive power.
+
 ### 原理
 
 Bagging 的做法是对样本进程重采样，产生出若干个不同的子集，再从每个子集中训练出一个个体学习器。
@@ -18,7 +20,9 @@ Bagging 的做法是对样本进程重采样，产生出若干个不同的子集
 
 ### 偏差-方差
 
-大部分情况下，经过 bagging 得到的结果方差（variance）更小。
+大部分情况下，经过 bagging 得到的结果方差（variance）更小。也就是说，bagging 在保持低 bias 的情况下，同时会减小 variances。
+
+By making slightly different or let say randomized models, bagging ensures that the predictions do not read very high variance. They're generally more generalizable, bagging doesn't over exhaust the information in the training data. 
 
 ## 采样
 
