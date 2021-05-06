@@ -3,7 +3,6 @@
 
 import operator
 from math import log
-import decisionTreePlot as dtPlot
 
 
 def createDataSet():
