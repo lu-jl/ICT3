@@ -202,9 +202,8 @@ $P(感冒|打喷嚏 \times 建筑工人)=\frac{P(打喷嚏 \times 建筑工人|�
 
 ### SK 应用
 
-- [Bernoulli分布](20_sk-nb-bernoulli.py)
-- [多项式分布](21_sk-nb-multinomial.py)
-- [高斯分布](22_sk-nb-gaussian.py)
+- [SK 应用](20_nb-classify.ipynb)
+
 
 ## Ref
 

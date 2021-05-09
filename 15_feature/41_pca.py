@@ -51,6 +51,6 @@ def show_picture(dataMat, reconMat):
 
 
 if __name__ == "__main__":
-    dataMat = loadDataSet('data/testSet.txt')
+    dataMat = loadDataSet('dataset/testSet.txt')
     lowDDataMat, reconMat = pca(dataMat, 1)  # 只需要1个特征向量
     show_picture(dataMat, reconMat)

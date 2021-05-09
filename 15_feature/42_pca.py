@@ -43,7 +43,7 @@ def pca(dataMat, topFeatNb=9999999):
 
 
 def replaceNanWithMean():
-    datMat = loadDataSet('data/secom.data', ' ')
+    datMat = loadDataSet('dataset/secom.data', ' ')
     numFeat = shape(datMat)[1]
     for i in range(numFeat):
         # 对value不为NaN的求均值
