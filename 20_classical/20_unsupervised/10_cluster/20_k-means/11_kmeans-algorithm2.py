@@ -110,6 +110,6 @@ def biKMeans(dataMat, k, distMeas=eulerDistance):
 
 if __name__ == "__main__":
     # 加载测试数据集
-    dataSet = mat(loadDataSet('data/testSet2.txt'))
+    dataSet = mat(loadDataSet('dataset/testSet2.txt'))
     centList, myNewAssments = biKMeans(dataSet, 3)
     print('centList = ', centList)

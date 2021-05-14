@@ -67,7 +67,7 @@ def kMeans(dataSet, k, distMeas=eulerDistance, createCent=randomCentroids):
 
 
 if __name__ == "__main__":
-    dataSet = mat(loadDataSet('data/testSet.txt'))
+    dataSet = mat(loadDataSet('dataset/testSet.txt'))
 
     # 该算法会创建k个质心，然后将每个点分配到最近的质心，再重新计算质心。
     # 这个过程重复数次，知道数据点的簇分配结果不再改变位置。
