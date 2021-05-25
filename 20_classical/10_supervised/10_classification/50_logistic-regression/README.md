@@ -68,6 +68,14 @@ $f(x)=P(Y=1|x)=\frac{1}{1+e^{-(x-\mu)/\gamma}}$，表示分到分类 1 的概率
 
 在样本量极大的时候，每次更新权重会非常耗费时间，这时可以采用随机梯度下降法，这时每次迭代时需要将样本重新打乱，然后用下式不断更新权重。也就是去掉了求和，而是针对每个样本点都进行更新：$w_j \leftarrow w_j+\eta(y^{(i)}-f_{w,b}(x^{(i)})x_j^{(i)}$ for i in range(n)
 
+
+## Lab
+
+- [逻辑回归 Iris](20_iris-logistic-regression.ipynb)
+- [逻辑回归](22_logistic-regression.ipynb)
+- [逻辑回归 Digits](24_digits-logistic-regression.ipynb)
+
+
 ## Ref
 
 1. [逻辑回归(logistic regression)的本质——极大似然估计](https://blog.csdn.net/zjuPeco/article/details/77165974)

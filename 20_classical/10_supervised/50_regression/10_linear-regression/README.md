@@ -152,13 +152,13 @@ ElasticNet 在用 Lasso 回归太过（太多特征被稀疏为0），而 Ridge 
 
 ### 算法应用
 
-#### 随机数据回归
+- [线性回归](20_linear-regression-sk.ipynb)
+- [线性回归](22_linear-regression.ipynb)
+- [线性回归](25_linear-regression.ipynb)  
+- [线性回归 Houce](30_houce-linear-regression.ipynb)
+- [线性回归 Ridge](40_ridge-regression.ipynb)
+- [线性回归 Ridge](41_ridge-regression.ipynb)
 
-- [随机数据回归](25_linear-regression.ipynb)
-
-#### 房价预测
-
-- [房价预测](30_houce-linear-regression.ipynb)
 
 ## Ref
 

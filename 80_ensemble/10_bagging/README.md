@@ -34,7 +34,6 @@ Bagging 往往采用自助采样（Bootstrap Sampling），给定包含 m 个样
 
 ### 算法
 
-- [随机森林 = Bagging + 决策树](10_random-forest.md)
+- [随机森林 = Bagging + 决策树](10_random-forest/README.md)
 
-- 
 

@@ -90,3 +90,6 @@ df.mean().sort_values().plot()
 - Python/Matplotlib
 - Python/Seaborn
 
+
+## Lab
+- [数据探索](20_explore.ipynb)

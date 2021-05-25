@@ -40,6 +40,6 @@ Boosting 算法的工作机制是首先从训练集用初始权重训练出一�
 
 ## 算法
 
-- [Adaboost](40_adaboosting.md)
-- gbdt
-- xgboost 
+- [Adaboost](10_adaboost/README.md)
+- [GBDT](30_gbdt/README.md)
+- [XGBoost](32_xgboost/README.md) 

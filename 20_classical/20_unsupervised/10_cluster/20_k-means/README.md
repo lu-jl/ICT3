@@ -70,3 +70,9 @@ K-Means++ 的对于初始化质心的优化策略如下：
 - 对于异常点、离群点敏感
 - 如果各隐含类别的数据不平衡，比如各隐含类别的数据量严重失衡，或者各隐含类别的方差不同，则聚类效果不佳。
 
+
+## Lab
+
+- [K-Means Football](20_kmeans-football.ipynb)
+- [K-Means](22_kmeans.ipynb)
+- [K-Means](24_kmeans.ipynb)

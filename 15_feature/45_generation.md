@@ -31,3 +31,7 @@
 - 从一元X空间变换到二元Z空间
 - 在Z空间使用PLA：对应X空间的二次曲线
 
+
+## Lab
+
+- [特征衍生](45_generation-knn.ipynb)

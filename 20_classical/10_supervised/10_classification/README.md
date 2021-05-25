@@ -61,12 +61,13 @@ ROC代表（Receiver Operating  Characteristics）：如图，ROC 是通过将�
 
 分类（Classification）与回归最大的区别在于，不同的分类之前没有任何关联。
 
-- 逻辑回归：常用
-- 朴素贝叶斯（Naive Bayes）：用于 NLP
-- 支持向量机 SVM（Support Vector Classifier）：中小型数据集表现好
-- 决策树（Decision Tree Classifier）：常用
-- 随机森林（Random Forest）：
-- K-近邻算法 KNN（K-Nearest Neighbors）：较少用
+- [KNN](10_knn/README.md)
+- [决策树（Decision Tree Classifier）](20_decision-tree/README.md)
+- [朴素贝叶斯（Naive Bayes）](30_bayes/README.md)
+- [Perceptron 感知机](40_perceptron/README.md)
+- [逻辑回归](50_logistic-regression/README.md)
+- [支持向量机 SVM（Support Vector Classifier）](60_svm/README.md)
+
 
 ## 算法
 

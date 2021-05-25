@@ -80,6 +80,9 @@ we'll get similar target distribution over different faults. If we split data in
 ### 按ID分拆
 
 
+## Lab
+
+- [数据分拆](50_separation.ipynb)
 
 
 

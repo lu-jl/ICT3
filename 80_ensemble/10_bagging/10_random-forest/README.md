@@ -60,3 +60,11 @@ TRTE 在数据转化的过程也使用了类似于 RF 的方法，建立 T 个�
 
 - 在某些噪音比较大的样本集上，RF 模型容易陷入过拟合。
 - 取值划分比较多的特征容易对 RF 的决策产生更大的影响，从而影响拟合的模型的效果。
+
+
+# Lab
+
+- [随机森林 分类](20_rf-classifier.ipynb)
+- [随机森林 分类 Grid](22_rf-grid-classify.ipynb)
+- [随机森林 分类 Grid](23_rf-grid-classify.ipynb)
+- [随机森林 分类 Pipeline](24_rf-pipeline-classify.ipynb)

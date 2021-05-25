@@ -95,3 +95,9 @@ $𝑦_𝑖(𝑤∙𝑥_𝑖+𝑏)≥1−𝜉_𝑖$。
 
 支持向量回归 SVR（Support Vector Regression）假设能容忍 $f(x)$ 与 y 之间有最多 $\epsilon$ 的偏差，即仅当 $f(x)$ 与 y 之间的差别绝对值大于 $\epsilon$ 时才计算损失。
 
+
+## Lab
+
+- [SVM 分类](20_svm-classify.ipynb)
+- [SVM 分类 Brest](22_svm-brest-classify.ipynb)
+- [SVM 分类 高斯](24_gaussian-svm-classify.ipynb)

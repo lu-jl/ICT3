@@ -149,3 +149,15 @@ CART 决策树的剪枝主要采用的是 CCP（Cost-Complexity Prune）方法�
 ### 模型使用
 
 预测时，在树的内部节点处用某一属性值进行判断，根据判断结果决定进入哪个分支节点，直到到达叶节点处，得到分类结果。这是一种基于 if-then-else 规则的有监督学习算法，决策树的这些规则通过训练得到，而不是人工制定的，适用于任何监督学习任务。
+
+
+## Lab
+
+- [决策树 分类 Iris](20_iris-dt-classify.ipynb)
+- [决策树 分类 Iris](21_iris-dt-classify.ipynb)
+- [决策树 分类 Iris](22_iris-dt-classify.ipynb)
+- [决策树 分类 Body](30_body-dt-classify.ipynb)
+- [决策树 分类 Titanic](35_titanic-dt-classify.ipynb)
+
+
+

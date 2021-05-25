@@ -26,4 +26,10 @@ AdaBoost 算法是通过改变样本的数据分布来实现下一轮最优分�
 当然在每一轮的训练中，我们都需要从众多“臭皮匠”中选择一个拔尖的，也就是这一轮训练评比中的最优“臭皮匠”，对应的就是错误率最低的分类器。当然每一轮的样本的权重都会发生变化，这样做的目的是为了让之前错误分类的样本得到更多概率的重复训练机会。
 
 
+## Lab
+
+- [Adaboost 分类](20_adaboost-classify.ipynb)
+- [Adaboost 分类](22_adaboost-classify.ipynb)
+- [Adaboost 回归 Boston](26_adaboost-regressor-boston.ipynb)
+- [Adaboost 回归](28_adaboost-regressor.ipynb)
 

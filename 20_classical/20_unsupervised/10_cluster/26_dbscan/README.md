@@ -131,7 +131,9 @@ DBSCAN的聚类定义很简单：由密度可达关系导出的最大密度相�
 ，邻域样本数阈值MinPts联合调参，不同的参数组合对最后的聚类效果有较大影响。
 
 
+## Lab
 
+- [DBSCAN](20_dbscan-cluster.ipynb)
 
 
 ## Ref

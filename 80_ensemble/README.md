@@ -52,9 +52,7 @@ Stacking 是学习法的典型代表，Stacking 先从初始训练集中训练�
 ## 种类
 
 - [Bagging](10_bagging/README.md)
-
 - [Boosting](20_boosting/README.md)
-
 - [Stacking](30_stacking/README.md)
 
 ## 总结

@@ -42,4 +42,8 @@ XGBoost的核心算法思想是：
 - eval_metric：模型性能评估函数
 
 
+## Lab
+
+- [XGBoost 分类](20_xgboost-classify.ipynb)
+- [XBBoost 分类 Grid](22_xgboost-grid-classify.ipynb)
 
