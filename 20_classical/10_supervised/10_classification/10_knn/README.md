@@ -1,8 +1,6 @@
 # KNN
 
-KNN-K 近邻（K Nearest Neighbour）算法是基本的监督学习分类算法，用于多分类。
-
-
+KNN（K Nearest Neighbour）算法是基本的监督学习分类算法，用于多分类。
 
 ## 算法
 
