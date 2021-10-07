@@ -379,7 +379,7 @@ t-SNE 是目前来说效果最好的数据降维与可视化方法，但是它�
 
 ## Lab
 
-- [数据预处理](40_preprocess.ipynb)
+- [数据预处理](40_titanic-preprocess.ipynb)
 - [数据预处理 Mushrooms](41_mushrooms-preprocess.ipynb)
 - [数据预处理 PCA](42_pca.ipynb)
 - [数据预处理 LDA](43_lda.ipynb)
