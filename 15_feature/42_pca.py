@@ -1,14 +1,18 @@
-#!/usr/bin/python
-# coding: utf-8
-
 from numpy import *
 import matplotlib.pyplot as plt
+import os, sys
+
+basepath = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.join(basepath, '../'))
+import dataset
+secom_path = os.path.join(dataset.pca_path, 'secom.data')
+
 
 
 def loadDataSet(fileName, delim='\t'):
     fr = open(fileName)
     stringArr = [line.strip().split(delim) for line in fr.readlines()]
-    datArr = [map(float, line) for line in stringArr]
+    datArr = [list(map(float, line)) for line in stringArr]
     return mat(datArr)
 
 
@@ -43,22 +47,24 @@ def pca(dataMat, topFeatNb=9999999):
 
 
 def replaceNanWithMean():
-    datMat = loadDataSet('dataset/secom.data', ' ')
+    datMat = loadDataSet(secom_path, ' ')
     numFeat = shape(datMat)[1]
     for i in range(numFeat):
         # 对value不为NaN的求均值
         # .A 返回矩阵基于的数组
         meanVal = mean(datMat[nonzero(~isnan(datMat[:, i].A))[0], i])
         # 将value为NaN的值赋值为均值
-        datMat[nonzero(isnan(datMat[:, i].A))[0],i] = meanVal
+        datMat[nonzero(isnan(datMat[:, i].A))[0], i] = meanVal
     return datMat
 
 
 def show_picture(dataMat, reconMat):
     fig = plt.figure()
     ax = fig.add_subplot(111)
-    ax.scatter(dataMat[:, 0].flatten().A[0], dataMat[:, 1].flatten().A[0], marker='^', s=90)
-    ax.scatter(reconMat[:, 0].flatten().A[0], reconMat[:, 1].flatten().A[0], marker='o', s=50, c='red')
+    ax.scatter(dataMat[:, 0].flatten().A[0],
+               dataMat[:, 1].flatten().A[0], marker='^', s=90)
+    ax.scatter(reconMat[:, 0].flatten().A[0], reconMat[:,
+                                                       1].flatten().A[0], marker='o', s=50, c='red')
     plt.show()
 
 
@@ -75,7 +81,8 @@ def analyse_data(dataMat):
     for i in range(0, len(eigValInd)):
         line_cov_score = float(eigvals[eigValInd[i]])
         sum_cov_score += line_cov_score
-        print('主成分: %s, 方差占比: %s%%, 累积方差占比: %s%%' % (format(i+1, '2.0f'), format(line_cov_score/cov_all_score*100, '4.2f'), format(sum_cov_score/cov_all_score*100, '4.1f')))
+        print('主成分: %s, 方差占比: %s%%, 累积方差占比: %s%%' % (format(i+1, '2.0f'), format(line_cov_score /
+                                                                                 cov_all_score*100, '4.2f'), format(sum_cov_score/cov_all_score*100, '4.1f')))
 
 
 if __name__ == "__main__":
