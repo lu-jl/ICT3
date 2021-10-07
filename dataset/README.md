@@ -3,6 +3,11 @@
 # 步骤
 
 1. 在百度网盘下载数据
+```
+链接: https://pan.baidu.com/s/1nu9i8tuDWsYlhW9XYilRAw 
+提取码: vp3d
+```
+
 2. 将数据copy到dataset目录当中，恢复以下的目录结构
 
 ```
