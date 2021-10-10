@@ -38,11 +38,7 @@
 - [数据探索](20_explore.md)
 - [数据清洗](30_clean.md)
 - [特征预处理](40_preprocess.md)
-- [特征衍生](45_generation.md)
 - [数据分拆](50_seperation.md)
-- 特征监控
-  - 有效性分析：特征的重要性、权重
-  - 重要特征监控：防止质量下滑
 
 
 
