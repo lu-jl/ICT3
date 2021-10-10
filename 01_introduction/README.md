@@ -85,7 +85,7 @@ AI 是目标，而机器学习 ML（Machine Learning）是实现 AI 的方法，
 
 ### 大数据 vs. ML
 
-大数据已经论文 ML 中特征工程的工具
+大数据已经沦为 ML 中特征工程的工具
 
 ### 函数 vs. 概率
 
@@ -391,9 +391,8 @@ $E(f;D)=bias^2(x)+var(x)+\epsilon ^2$：泛化误差可以分解为偏差、方�
 
 - [训练流程](20_procedure.md)
 
-## Ref
+## 阅读材料
 
 1. [一口气读完人工智能简史](https://www.toutiao.com/a6761213894112313860/?tt_from=weixin&utm_campaign=client_share&wxshare_count=1&timestamp=1581728608&app=news_article&utm_source=weixin&utm_medium=toutiao_ios&req_id=202002150903280101290480370E50AAE1&group_id=6761213894112313860)
 2. [陆奇最新演讲：没有学习能力，看再多世界也没用](https://page.om.qq.com/page/O-AOlyQhshJ7QZ9X9g1wq0ZA0)
 3. [计算学习理论](http://www.dataguru.cn/article-11253-1.html)
-4. 
