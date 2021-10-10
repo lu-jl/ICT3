@@ -29,8 +29,6 @@ $x^{(i)}_j$表示数据集第 i 个数据的第 j 个属性取值。
 
 ### 评估
 
-#### 性能度量：MSE
-
 #### 损失函数：SE
 
 其损失函数是 Squared Error，也就是单个样本的平方差。
@@ -157,7 +155,6 @@ ElasticNet 在用 Lasso 回归太过（太多特征被稀疏为0），而 Ridge 
 
 - [算法1](10_linear-regression-algorithm1.py)
 - [算法2](11_linear-regression-algorithm2.py)
-- [算法3](19_linear-regression-algorithm.py)（未完成）
 
 ### 算法应用
 

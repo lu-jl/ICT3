@@ -1,6 +1,6 @@
 # 机器学习&实践
 
-## 机器学习简介
+## 简介
 - [机器学习简介](01_introduction/README.md)
 - [标准&比赛流程](01_introduction/20_procedure.md)
 

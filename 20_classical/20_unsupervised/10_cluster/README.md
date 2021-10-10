@@ -30,7 +30,7 @@
 
 ## 具体算法
 
-- [K-means-K均聚类](20_k-means/README.md)
+- [K-means K均聚类](20_k-means/README.md)
 - [Birch](22_birch/README.md)
 - [DBSCAN](26_dbscan/README.md)
 

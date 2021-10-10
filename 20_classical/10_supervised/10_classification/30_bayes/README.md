@@ -172,7 +172,7 @@ $P(感冒|打喷嚏 \times 建筑工人)=\frac{P(打喷嚏 \times 建筑工人|�
 
 ### 应用
 
-- [朴素贝叶斯 分类](20_nb-classify.ipynb)
+- [朴素贝叶斯分类](20_nb-classify.ipynb)
 
 
 ## Ref
