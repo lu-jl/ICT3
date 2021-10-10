@@ -8,21 +8,10 @@
 
 通常其数学表达式是：回归系数是一个向量，输入也是向量，这些运算也就是求出二者的内积。
 
-## Metrics
-
-计算一组实例的预测值与是 label（target value）的误差，用于不同算法的损失函数
-
-### MSE
-
-计算方差
-
-### MAE
-
 
 
 ## 分类
 
 - [线性回归（Linear Regression）](10_linear-regression/README.md)
 - 
-
 
