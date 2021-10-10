@@ -69,5 +69,4 @@ we'll get similar target distribution over different faults. If we split data in
 ## Ref
 
 1. [交叉验证](https://baike.baidu.com/item/%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81/8543100?fr=aladdin)
-2. 
 
